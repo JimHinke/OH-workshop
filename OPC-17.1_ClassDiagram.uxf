@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>536</y>
+      <x>232</x>
+      <y>472</y>
       <w>176</w>
       <h>160</h>
     </coordinates>
@@ -29,8 +29,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>536</y>
+      <x>496</x>
+      <y>472</y>
       <w>136</w>
       <h>160</h>
     </coordinates>
@@ -50,8 +50,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>592</x>
-      <y>176</y>
+      <x>488</x>
+      <y>112</y>
       <w>152</w>
       <h>144</h>
     </coordinates>
@@ -67,8 +67,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>128</x>
-      <y>176</y>
+      <x>24</x>
+      <y>112</y>
       <w>144</w>
       <h>320</h>
     </coordinates>
@@ -78,7 +78,7 @@ Game
 -players : List&lt;Player&gt;
 -deck : Deck
 -
-+StartGame()
++RunGame()
 +DealCard()
 
 
@@ -88,37 +88,39 @@ Game
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>752</x>
-      <y>536</y>
-      <w>88</w>
-      <h>56</h>
+      <x>648</x>
+      <y>472</y>
+      <w>120</w>
+      <h>72</h>
     </coordinates>
-    <panel_attributes>Constructor?
+    <panel_attributes>ComputerDealer
+--
+Constructor initiates 
+new ComputerDealer 
+with set values.
 bg=magenta</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>336</x>
-      <y>176</y>
+      <x>232</x>
+      <y>112</y>
       <w>112</w>
       <h>144</h>
     </coordinates>
     <panel_attributes>Deck
 --
 -cards : List&lt;Card&gt;
--random : Random
 --
-+DrawDeck()
-+Shuffle</panel_attributes>
++DrawCard()</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>440</x>
-      <y>240</y>
+      <x>336</x>
+      <y>176</y>
       <w>168</w>
       <h>24</h>
     </coordinates>
@@ -128,8 +130,8 @@ bg=magenta</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>464</x>
-      <y>376</y>
+      <x>360</x>
+      <y>312</y>
       <w>168</w>
       <h>120</h>
     </coordinates>
@@ -148,8 +150,8 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>416</x>
-      <y>488</y>
+      <x>312</x>
+      <y>424</y>
       <w>120</w>
       <h>64</h>
     </coordinates>
@@ -160,8 +162,8 @@ bg=magenta</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>576</x>
-      <y>488</y>
+      <x>472</x>
+      <y>424</y>
       <w>128</w>
       <h>64</h>
     </coordinates>
@@ -172,8 +174,8 @@ lt=&lt;&lt;-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>544</x>
-      <y>312</y>
+      <x>440</x>
+      <y>248</y>
       <w>136</w>
       <h>80</h>
     </coordinates>
@@ -183,8 +185,8 @@ lt=&lt;&lt;-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>256</y>
+      <x>160</x>
+      <y>192</y>
       <w>88</w>
       <h>24</h>
     </coordinates>
@@ -194,12 +196,27 @@ lt=&lt;&lt;-</panel_attributes>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>264</x>
-      <y>424</y>
+      <x>160</x>
+      <y>360</y>
       <w>216</w>
       <h>24</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>360</x>
+      <y>112</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>Deck
+--
+Constructor initiates
+a new deck of cards.
+bg=magenta</panel_attributes>
+    <additional_attributes/>
   </element>
 </diagram>
