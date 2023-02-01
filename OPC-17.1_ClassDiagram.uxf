@@ -1,140 +1,205 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <diagram program="umlet" version="15.0.0">
-  <zoom_level>10</zoom_level>
+  <zoom_level>8</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1470</x>
-      <y>10</y>
-      <w>230</w>
-      <h>90</h>
+      <x>336</x>
+      <y>536</y>
+      <w>176</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>KANDITATER
+    <panel_attributes>HumanPlayer
 --
-PLAYER: Namn, Balance
-KORTLEK: Färg, 
-DEALER: </panel_attributes>
-    <additional_attributes/>
-  </element>
-  <element>
-    <id>UMLClass</id>
-    <coordinates>
-      <x>630</x>
-      <y>330</y>
-      <w>230</w>
-      <h>180</h>
-    </coordinates>
-    <panel_attributes>Player
+-name : string
+-balance : int
+-hand : List&lt;Card&gt;
+-sumCard : int
 --
--name:string
--balance:int
--card:Deck&lt;&gt;
--sumCard:int
---
-+Player(name:string, balance:int)
-+NewCard()
++DrawCard()
++Pass()
++ShowHand()
 +Bet(amount:int)
-+Pass()
+
++Player(name:string, balance:int)
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>880</x>
-      <y>330</y>
-      <w>110</w>
-      <h>180</h>
+      <x>600</x>
+      <y>536</y>
+      <w>136</w>
+      <h>160</h>
     </coordinates>
-    <panel_attributes>Dealer
+    <panel_attributes>ComputerDealer
 --
--balance:int
--card:Deck&lt;&gt;
--sumCard:int
+-name : string
+-balance : int
+-hand : List&lt;Card&gt;
+-sumCard : int
 --
-+NewCard()
-+DealCard()
++DrawCard()
 +Pass()
++ShowHand()
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>780</x>
-      <y>80</y>
-      <w>120</w>
-      <h>180</h>
+      <x>592</x>
+      <y>176</y>
+      <w>152</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>Deck
+    <panel_attributes>Card
 --
--Color:enum
--Number:int
+-Value : int
+-Suit : string
 --
-+Shuffle()
-+RemoveCard()
++Card(value: int, suit: string)
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>560</x>
-      <y>560</y>
-      <w>500</w>
-      <h>220</h>
+      <x>128</x>
+      <y>176</y>
+      <w>144</w>
+      <h>320</h>
     </coordinates>
     <panel_attributes>lw=2
-The Game
+Game
 --
-+
+-players : List&lt;Player&gt;
+-deck : Deck
+-
++StartGame()
++DealCard()
+
+
 </panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLNote</id>
     <coordinates>
-      <x>470</x>
-      <y>330</y>
-      <w>140</w>
-      <h>70</h>
+      <x>752</x>
+      <y>536</y>
+      <w>88</w>
+      <h>56</h>
     </coordinates>
-    <panel_attributes>Note..
-bg=blue</panel_attributes>
+    <panel_attributes>Constructor?
+bg=magenta</panel_attributes>
     <additional_attributes/>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>730</x>
-      <y>250</y>
-      <w>130</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;80.0;110.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>830</x>
-      <y>250</y>
-      <w>130</w>
-      <h>100</h>
-    </coordinates>
-    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>110.0;80.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1060</x>
-      <y>290</y>
-      <w>100</w>
-      <h>30</h>
+      <x>336</x>
+      <y>176</y>
+      <w>112</w>
+      <h>144</h>
     </coordinates>
-    <panel_attributes>/AbstractClass/
-</panel_attributes>
+    <panel_attributes>Deck
+--
+-cards : List&lt;Card&gt;
+-random : Random
+--
++DrawDeck()
++Shuffle</panel_attributes>
     <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>440</x>
+      <y>240</y>
+      <w>168</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;190.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>464</x>
+      <y>376</y>
+      <w>168</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>/Player/
+--
+-name : string
+-balance : int
+-hand : List&lt;Card&gt;
+-sumCard : int
+--
++DrawCard()
++Pass()
++ShowHand()</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>416</x>
+      <y>488</y>
+      <w>120</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;-
+&lt;&lt;inherits&gt;&gt;</panel_attributes>
+    <additional_attributes>130.0;10.0;130.0;40.0;10.0;40.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>576</x>
+      <y>488</y>
+      <w>128</w>
+      <h>64</h>
+    </coordinates>
+    <panel_attributes>&lt;&lt;inherits&gt;&gt;
+lt=&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;40.0;140.0;40.0;140.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>544</x>
+      <y>312</y>
+      <w>136</w>
+      <h>80</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;40.0;150.0;40.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>256</y>
+      <w>88</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;90.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>264</x>
+      <y>424</y>
+      <w>216</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;250.0;10.0</additional_attributes>
   </element>
 </diagram>
